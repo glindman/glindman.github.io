@@ -1,0 +1,322 @@
+<DOCTYPE! html>
+<html lang="en">
+
+<head>
+    <title>The Perfect Carry-On</title>
+    <meta name="ad.size" content="width=336,height=280">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+
+    <style>
+
+    /* CSS STYLE BEGINS */
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #bannerbox {
+            position: fixed;
+            overflow: hidden;
+            width: 336px;
+            height: 280px;
+            cursor: pointer;
+        }
+
+        #footer {
+            position: absolute;
+            display: block;
+            width: 50%;
+            height: auto;
+            float: left;
+            margin-left: 5%;
+            bottom: 5%;
+            z-index: 300;
+        }
+
+        #frameOne {
+            width: 336px;
+            height: 280px;
+            position: absolute;
+            z-index: 200;
+        }
+
+        #frameTwo {
+            width: 336px;
+            height: 280px;
+            position: relative;
+        }
+
+        #learnMore {
+             position: absolute;
+             display: block;
+             right: 0;
+             width: 33.333%;
+             bottom: 0px;
+             z-index: 100;
+        }
+
+        .frameOneCopy {
+            position: absolute;
+            display: block;
+            margin-left: 5%;
+            top: 33%;
+            z-index: 100;
+            width: 60%;
+        }
+
+         .frameTwoCopy {
+            position: absolute;
+            display: block;
+            z-index: 100;
+            margin-left: 5%;
+            top: 25%;
+            width: 70%;
+        }
+
+        .copyOne {
+            margin-bottom: 5%;
+            width: 85%;
+        }
+
+        .copyThree {
+            margin-bottom: 5%;
+        }
+
+        .seal {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: 30%;
+        }
+
+        .logo {
+            position: absolute;
+            display: inline-block;
+            vertical-align: middle;
+            width: 60%;
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+
+        .button .buttonText {
+            position: relative;
+            display: block;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            top: 45%;
+        }
+
+        .button {
+            width: 100%;
+            height: 56px;
+            background-color: #ffce34;
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            z-index: 0;
+        }
+
+    /* CSS STYLE ENDS */
+
+    /* ANIMATION BEGINS */
+
+        .copyOneAnimation {
+            animation-name: copyOne;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .copyTwoAnimation {
+            animation-name: copyTwo;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .frameOneBackgroundAnimation {
+            animation-name: frameOneBackground;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .logoYellowAnimation {
+            animation-name: logo;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .copyThreeAnimation {
+            animation-name: copyThree;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        .copyFourAnimation {
+            animation-name: copyFour;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+    /* ANIMATION ENDS */
+
+    /* KEYFRAMES BEGIN */
+
+        @keyframes copyOne {
+            0% {
+                transform: translateX(-90px);
+                opacity: 0;
+            }
+            15% {
+                opacity: 1;
+            }
+            20% {
+                transform: translateX(0px);
+                opacity: 1;
+                transition-timing-function: cubic-bezier(0,1,1,1);
+            }
+            47% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+            50% {
+                transform: translate(100px);
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes copyTwo {
+            0% {
+                transform:  translateX(200px);
+                opacity: 0;
+            }
+            15% {
+                opacity: 1;
+            }
+            20% {
+                transform: translateX(0px);
+                opacity: 1;
+                transition-timing-function: cubic-bezier(0,1,1,1);
+            }
+            47% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes frameOneBackground {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 1;
+            }
+            55% {
+                opacity: 0;
+                transition-timing-function: cubic-bezier(0,1,1,.01);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes logo {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            55% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes copyThree {
+            0% {
+                opacity: 0;
+            }
+            55% {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+            62% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes copyFour {
+            0% {
+                opacity: 0;
+            }
+            63% {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+            70% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+    /* KEYFRAMES END */
+
+    </style>
+
+</head>
+
+<body>
+    <div id="bannerbox">
+        <div id="frameOne">
+            <div class="frameOneCopy">
+                <img src="copy_one.svg" class="copyOne copyOneAnimation">
+                <img src="copy_two.svg" class="copyTwo copyTwoAnimation">
+            </div>
+            <div class="background">
+                <img src="frameOneBackground.jpg" class="frameOneBackground frameOneBackgroundAnimation">
+            </div>
+        </div>
+        <div id="frameTwo">
+            <div class="frameTwoCopy">
+                <img src="copy_three.svg" class="copyThree copyThreeAnimation">
+                <img src="copy_four.svg" class="copyFour copyFourAnimation">
+            </div>
+            <div id="learnMore">
+                <div class="button"><img src="learn_more.svg" class="buttonText"></div>
+            </div>
+            <div class="background">
+                <img src="frameTwoBackground.svg" class="frameTwoBackground">
+            </div>
+        </div>
+        <div id="footer">
+            <img src="BMV_seal.svg" class="seal">
+            <img src="logo.svg" class="logo logoBlue logoBlueAnimation">
+            <img src="logo2.svg" class="logo logoYellow logoYellowAnimation">
+        </div>
+    </div>
+</body>
+
+</html>

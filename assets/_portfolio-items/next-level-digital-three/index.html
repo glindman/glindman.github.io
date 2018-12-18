@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Seeker</title>
+<meta name="ad.size" content="width=336,height=280">
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="" />
+
+<!-- CSS BEGIN-->
+
+<style>
+
+/* Style BEGIN */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #boundingbox {
+        height: 280px;
+        width: 336px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    #content_one {
+        position: relative;
+        z-index: 50;
+        top: 40%;
+        text-align: center;
+        padding-left: 18.5px;
+        padding-right: 18.5px;
+    }
+
+    #content_two {
+        position: absolute;
+        z-index: 50;
+        top: 45%;
+        text-align: center;
+        padding-left: 18.5px;
+        padding-right: 18.5px;
+    }
+
+    #footer {
+        position: absolute;
+        z-index: 100;
+        margin-top: 239.5px;
+        text-align: center;
+    }
+
+    #background {
+        position: fixed;
+    }
+
+    #polka_dots {
+        position: absolute;
+        z-index: 10;
+        width: 100%
+    }
+
+    #polka_dots .circles {
+        height: 8px;
+        width: 8px;
+        border-radius: 50%;
+    }
+
+    #polka_dots .blue_dot {
+        float: left;
+        background-color: #09436b;
+    }
+
+    #polka_dots .yellow_dot {
+        float: right;
+        background-color: #ffc530;
+
+    }
+
+    .dot_one {
+        position: absolute;
+        left: 65px;
+        top: 16px;
+    }
+
+    .dot_two {
+        position: absolute;
+        left: 15px;
+        top: 165px;
+    }
+
+    .dot_three {
+        position: absolute;
+        left: 70px;
+        top: 200px;
+    }
+
+    .dot_four {
+        position: absolute;
+        left: 143px;
+        top: 222px;
+    }
+
+    .dot_five {
+        position: absolute;
+        right: 55px;
+        top: 220px;
+    }
+
+    .dot_six {
+        position: absolute;
+        right: 35px;
+        top: 93px;
+    }
+
+    .dot_seven {
+        position: absolute;
+        right: 55px;
+        top: 29px;
+    }
+
+    .quote_one {
+        position: absolute;
+        display: block;
+        width: 24px;
+        height: auto;
+        top: -25px;
+        float: left;
+    }
+
+    .quote_two {
+        position: relative;
+        width: 24px;
+        height: auto;
+        transform: rotate(180deg);
+        float: right;
+        bottom: -77px;
+    }
+
+    .copy_one {
+        position: relative;
+        width: auto;
+        height: 35px;
+        float: left;
+        margin-bottom: 2px;
+    }
+
+    .copy_two {
+        position: relative;
+        width: auto;
+        height: 35px;
+        display: block;
+        float: right;
+    }
+
+    .copy_three {
+        position: relative;
+        width: 133px;
+        height: auto;
+        float: left;
+        margin-bottom: 2px;
+        top: -25px;
+    }
+
+    .copy_four {
+        position: relative;
+        width: 179px;
+        height: auto;
+        float: right;
+        top: -25px;
+    }
+
+    .logo {
+        display: inline-block;
+        float: left;
+        width: 145px;
+        height: auto;
+        margin-left: 18.5px;
+        padding-right: 74.5px;
+    }
+
+    .button {
+        display: inline-block;
+        float: right;
+        width: 78px;
+        height: auto;
+        margin-right: 18.5px;
+    }
+
+    .button:hover {
+        display: inline-block;
+        float: right;
+        width: 76px;
+        height: auto;
+        padding-right: 1px;
+        padding-left: 1px;
+        box-shadow: 2px 2px 5px rgb(255, 197, 48, 0.4);
+    }
+
+    .image_one {
+        position: fixed;
+        z-index: 2;
+    }
+
+    .image_two {
+        position: fixed;
+    }
+
+/* Style END */
+
+/* Animations BEGIN */
+
+    .quote_one_animate {
+        animation-name: QuoteOne;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+
+    .copy_one_animate {
+        animation-name: CopyOne;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+
+    .copy_two_animate {
+        animation-name: CopyTwo;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+
+    .quote_two_animate {
+        animation-name: QuoteTwo;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+
+    .image_two_animate {
+        animation-name: Girl;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+    }
+
+    .copy_three_animate {
+        animation-name: CopyThree;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .copy_four_animate {
+        animation-name: CopyFour;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .dot_seven_animate {
+        animation-name: DotSeven;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .dot_three_animate {
+        animation-name: DotThree;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .dot_five_animate {
+        animation-name: DotFive;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .dot_one_animate {
+        animation-name: DotOne;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .dot_four_animate {
+        animation-name: DotFour;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .dot_two_animate {
+        animation-name: DotTwo;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .dot_six_animate {
+        animation-name: DotSix;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+
+/* Animations END */
+
+/* Keyframes BEGIN */
+
+    @keyframes QuoteOne {
+        0% {
+            transform: translateX(-300px);
+            opacity: 0;
+        }
+        3% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        48% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        50% {
+            transform: translateX(-300px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(-300px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes CopyOne {
+        0% {
+            transform: translateX(-300px);
+            opacity: 0;
+        }
+        2% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        48% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        50% {
+            transform: translateX(300px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(300px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes CopyTwo {
+        0% {
+            transform: translateX(300px);
+            opacity: 0;
+            animation-timing-function: ease-out;
+        }
+        2% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        48% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        50% {
+            transform: translateX(-300px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(-300px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes QuoteTwo {
+        0% {
+            transform: translateX(300px) rotate(180deg);
+            opacity: 0;
+            animation-timing-function: ease-out;
+        }
+        3% {
+            transform: translateX(0px) rotate(180deg);
+            opacity: 1;
+        }
+        48% {
+            transform: translateX(0px) rotate(180deg);
+            opacity: 1;
+        }
+        50% {
+            transform: translateX(300px) rotate(180deg);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(300px) rotate(180deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes Girl {
+        0% {
+            z-index: 0;
+        }
+        48% {
+            z-index: 0;
+        }
+        50% {
+            z-index: 3;
+        }
+        100% {
+            z-index: 3;
+        }
+    }
+
+    @keyframes CopyThree {
+        0% {
+            transform: translateX(-300px);
+            opacity: 0;
+        }
+        50% {
+            transform: translateX(-300px);
+            opacity: 0;
+        }
+        52% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        98% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes CopyFour {
+        0% {
+            transform: translateX(300px);
+            opacity: 0;
+        }
+        50% {
+            transform: translateX(300px);
+            opacity: 0;
+        }
+        52% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        98% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes DotSeven {
+        0% {
+            opacity: 0;
+        }
+        8% {
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        98% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes DotThree {
+        0% {
+            opacity: 1;
+        }
+        18% {
+            opacity: 1;
+        }
+        20% {
+            opacity: 0;
+        }
+        28% {
+            opacity: 0;
+        }
+        30% {
+            opacity: 1
+        }
+        100% {
+            opacity: 1
+        }
+    }
+
+    @keyframes DotFive {
+        0% {
+            opacity: 1;
+        }
+        38% {
+            opacity: 1;
+        }
+        40% {
+            opacity: 0;
+        }
+        48% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1
+        }
+        100% {
+            opacity: 1
+        }
+    }
+
+    @keyframes DotOne {
+        0% {
+            opacity: 1;
+        }
+        58% {
+            opacity: 1;
+        }
+        60% {
+            opacity: 0;
+        }
+        68% {
+            opacity: 0;
+        }
+        70% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes DotFour {
+        0% {
+            opacity: 1;
+        }
+        78% {
+            opacity: 1;
+        }
+        80% {
+            opacity: 0;
+        }
+        88% {
+            opacity: 0;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes DotTwo {
+        0% {
+            opacity: 0;
+        }
+        18% {
+            opacity: 0;
+        }
+        20% {
+            opacity: 1;
+        }
+        98% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes DotSix {
+        0% {
+            opacity: 1;
+        }
+        58% {
+            opacity: 1;
+        }
+        60% {
+            opacity: 0;
+        }
+        68% {
+            opacity: 0;
+        }
+        70% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+/* Keyframes END */
+
+</style>
+
+<!--CSS END-->
+
+</head>
+
+<!--HTML BEGIN-->
+
+<body>
+    <div id="boundingbox">
+        <div id="polka_dots">
+            <div class="circles blue_dot dot_one dot_one_animate"></div>
+            <div class="circles blue_dot dot_two dot_two_animate"></div>
+            <div class="circles blue_dot dot_three dot_three_animate"></div>
+            <div class="circles yellow_dot dot_four dot_four_animate"></div>
+            <div class="circles yellow_dot dot_five dot_five_animate"></div>
+            <div class="circles yellow_dot dot_six dot_six_animate"></div>
+            <div class="circles yellow_dot dot_seven dot_seven_animate"></div>
+        </div>
+        <div id="content_one">
+            <img src="quote.svg" class="quote_one quote_one_animate">
+            <img src="quote.svg" class="quote_two quote_two_animate">
+            <img src="copy_one.svg" class="copy_one copy_one_animate">
+            <img src="copy_two.svg" class="copy_two copy_two_animate">
+        </div>
+        <div id="content_two">
+            <img src="copy_three.svg" class="copy_three copy_three_animate">
+            <img src="copy_four.svg" class="copy_four copy_four_animate">
+        </div>
+        <div id="footer">
+            <img src="logo.svg" class="logo">
+            <img src="button.svg" class="button">
+        </div>
+        <div id="background">
+            <img src="teengirl-336x280Image1.jpg" class="image_one">
+            <img src="teengirl-336x280Image2.jpg" class="image_two image_two_animate">
+        </div>
+    </div>
+</body>
+
+<!--HTML END-->
+</html>
