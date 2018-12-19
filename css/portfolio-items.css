@@ -71,7 +71,7 @@
 /* Whiskey City */
 
 .wc {
-  background-image: url(../assets/whiskey-city-geofilter.jpg);
+  background-image: url(../assets/whiskey-city-geofilter.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -118,7 +118,7 @@
 /* Indy Zoo Snapchat */
 
 .zoo-geofilter {
-  background-image: url(../assets/zoo-snapchat-geofilter.jpg);
+  background-image: url(../assets/zoo-snapchat-geofilter.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -171,14 +171,14 @@
 }
 
 .next-level-two {
-  background-image: url(../next-level-digital-two/NextLevel336x280-ipadguy-2.jpg);
+  background-image: url(../assets/next-level-digital-two-blurred.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
 
 .next-level-three {
-  background-image: url(../next-level-digital-three/teengirl-336x280Image2.jpg);
+  background-image: url(../assets/next-level-digital-three-blurred.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -194,14 +194,14 @@
 }
 
 .shapiros-digital-two {
-  background-image: url(../shapiros-digital-two/background.jpg);
+  background-image: url(../assets/shapiros-digital-two-blurred.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
 
 .shapiros-digital-three {
-  background-image: url(../shapiros-digital-three/background.jpg);
+  background-image: url(../assets/shapiros-digital-three-blurred.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -217,14 +217,14 @@
 }
 
 .bmv-digital-two {
-  background-image: url(../bmv-digital-two/FrameOneBackground.jpg);
+  background-image: url(../assets/bmv-digital-two-blurred.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
 
 .bmv-digital-three {
-  background-image: url(../bmv-digital-three/FrameOneBackground.jpg);
+  background-image: url(../assets/bmv-digital-three-blurred.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
