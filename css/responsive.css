@@ -82,6 +82,8 @@
   .header-left {
     flex-wrap: wrap;
     margin-top: 100px;
+    display: block;
+
   }
 }
 
@@ -170,12 +172,21 @@
   .header-left {
     flex-wrap: wrap;
     margin-top: 100px;
+    display: block;
   }
 }
 
 @media (max-width: 992px) {
   .hero {
     padding: 35% 0 0 0;
+  }
+
+  .social-links-top {
+    visibility: hidden;
+  }
+
+  .monogram {
+    visibility: hidden;
   }
 
   .description {

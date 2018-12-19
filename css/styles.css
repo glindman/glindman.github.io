@@ -287,7 +287,7 @@ a {
 
 .intro-center>h3 {
   color: #8C786F;
-  line-height: 0;
+  line-height: 1em;
 }
 
 .header-left {
